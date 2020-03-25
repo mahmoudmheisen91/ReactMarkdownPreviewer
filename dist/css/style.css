@@ -14,29 +14,142 @@ body {
   height: 100%;
 }
 
-header,
-footer {
-  background-color: #b181ff;
+header {
+  position: relative;
+  margin: 5px;
+  padding: 10px;
+  background-color: #81d7ff;
   font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
   color: black;
   border-radius: 10px;
 }
 
-header {
-  position: relative;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
 footer {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
   margin: 5px;
   padding: 7px;
-  text-align: right;
-  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+#markdown {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 10px;
+  margin: 0px;
+}
+
+#left {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+
+#right {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;
+}
+
+#editor {
+  min-width: 48.5vw;
+  resize: none;
+  height: 80vh;
+  padding: 15px;
+  margin: 0px 5px;
+  border: 2px solid #bbb;
+}
+
+#preview {
+  padding: 20px;
+  margin: 0px 5px;
+  border: 2px solid #bbb;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+#toolbar {
+  padding: 5px;
+  margin: 5px 5px 0px 5px;
+  background-color: #cacaca;
+  color: black;
+  border: 1px solid black;
+  -webkit-box-shadow: 1px 1px 10px 2px;
+          box-shadow: 1px 1px 10px 2px;
+  font-weight: bold;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#preview blockquote {
+  border-left: 3px solid black;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+#preview code {
+  display: inline-block;
+  background: #b8b8b8;
+  padding: 1px 4px 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#preview pre {
+  background: white;
+  padding: 5px 0 5px 5px;
+}
+
+#preview table {
+  border-collapse: collapse;
+}
+
+#preview td,
+#preview th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  #markdown {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+  }
+  #left {
+    grid-column: 1 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / span 1;
+  }
+  #right {
+    grid-column: 1 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / span 1;
+  }
+  #editor {
+    width: 95vw;
+  }
+  #preview {
+    width: 95vw;
+  }
+  #toolbar {
+    width: 95vw;
+  }
 }
