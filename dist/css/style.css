@@ -1,0 +1,42 @@
+/* Setup */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: #b181ff;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+}
+
+header {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 5px;
+  padding: 7px;
+  text-align: right;
+  font-size: 1.25rem;
+}
